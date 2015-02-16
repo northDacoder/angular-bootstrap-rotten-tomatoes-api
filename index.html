@@ -25,16 +25,17 @@
 
 
 		<div class="row">
-			<ul ng-repeat="item in result" class="col-xs-12 col-sm-12">
-				<h2 class="header">Movie Title: {{ item.title }}</h2>
-				<li><h1 class="btn btn-success">Critics Rating: {{ item.ratings.critics_score}} User Rating: {{ item.ratings.audience_score}}</h1></li>
+			<div ng-repeat="item in result" class="jumbotron">
+				<h1 class="header">Movie Title: {{ item.title }}</h1>
+				<h3 class="label label-info">Critics Rating: {{ item.ratings.critics_score}}</h3>
+				<h3 class="label label-danger">User Rating: {{ item.ratings.audience_score}}</h3>
 				<img ng-src="{{ item.posters.original }}" class="img-rounded">
-				<li><h1 class="btn btn-info">Year: {{ item.year }}</h1></li>
-				<li><h1 class="btn btn-danger">Rating: {{ item.mpaa_rating }}</h1></li>
-				<li><h1 class="btn btn-primary">Length: {{ item.runtime }} Minutes</h1></li>
+				<h1 class="btn btn-info">Year: {{ item.year }}</h1>
+				<h1 class="btn btn-danger">Rating: {{ item.mpaa_rating }}</h1>
+				<h1 class="btn btn-primary">Length: {{ item.runtime }} Minutes</h1>
 				<br>
 				<li>From the Critics: <p>{{ item.critics_consensus }}</p></li>
-			</ul>
+			</div>
 		</div>
 
 	</div>
