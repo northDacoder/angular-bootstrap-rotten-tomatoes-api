@@ -25,6 +25,10 @@ body {
 
 body {
   background: #43423E;
+  background: lightBlue;
+  background: url('img/purple.jpg');
+  background-size: 300px 300px;
+  background-repeat: repeat;
 }
 
 a {

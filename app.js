@@ -16,7 +16,7 @@ app.factory('rotten_tomatoes', function($resource){
 			});
 
 			api.fetch({movie_title: search_query, limit: search_limit}, function(response){
-
+				console.log(response);
 				callback(response);
 
 			});
