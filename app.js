@@ -7,7 +7,6 @@ app.factory('rotten_tomatoes', function($resource){
 			var search_query = query;
 			var search_limit = nummovies-1;
 
-
 			var api = $resource('http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=:key&q=:movie_title&page_limit=:limit&callback=JSON_CALLBACK', {
 				key: 'dpjxf3xsjbpj5wpmduveeseb',
 				limit: 10
@@ -18,7 +17,6 @@ app.factory('rotten_tomatoes', function($resource){
 			api.fetch({movie_title: search_query, limit: search_limit}, function(response){
 				console.log(response);
 				callback(response);
-
 			});
 		}
 	}
